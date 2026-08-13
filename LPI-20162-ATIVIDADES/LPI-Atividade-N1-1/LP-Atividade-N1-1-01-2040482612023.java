@@ -1,65 +1,57 @@
 import java.util.Scanner;
 
-public class LP_Atividade_N1_1_01_2040482612023{
-    public static void main(String[] args){
-    byte idade;
-    short faltas;
-    int matriculaID;
-    long codigoNacional;
-    float notaTrabalho;
-    double notaProvaFinal;
-    char conceitoFinal;
-    boolean aprovado;
+class LP_Atividade_N1_1_01_2040482612023 {
 
-    Scanner leitorRespostas = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-    System.out.print("Idade do Aluno: ");
-    idade = Byte.parseByte(leitorRespostas.nextLine());
-    // byte tem 8 bits | -32.768 a 32.767 de intervalo.
+        System.out.print("Idade do Aluno: ");
+        byte idade = Byte.parseByte(scanner.nextLine());
+        // byte: 8 bits | Intervalo: -128 a 127
 
-    System.out.print("Número de Faltas: ");
-    faltas = Short.parseShort(leitorRespostas.nextLine());
-    // short tem 16 bits |  -32.768 a 32.767 de intervalo.
-    
+        System.out.print("Número de Faltas: ");
+        short faltas = Short.parseShort(scanner.nextLine());
+        // short: 16 bits | Intervalo: -32768 a 32767
 
-    System.out.print("Matrícula ID: ");
-    matriculaID = Integer.parseInt(leitorRespostas.nextLine());
-    // int tem  32 bits | -2.147.483.648 a 2.147.483.647 de intevalo.
+        System.out.print("Matrícula ID: ");
+        int matriculaId = Integer.parseInt(scanner.nextLine());
+        // int: 32 bits | Intervalo: -2147483648 a 2147483647
 
-    System.out.print("Código Nacional do Estudante: ");
-    codigoNacional = Long.parseLong(leitorRespostas.nextLine());
-    // long tem 64 bits | -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807 de intervalo.
-   
+        System.out.print("Código Nacional do Estudante: ");
+        long codigoNacional = Long.parseLong(scanner.nextLine());
+        // long: 64 bits | Intervalo: -9223372036854775808 a 9223372036854775807
 
-    System.out.print("Nota do Trabalho: ");
-    notaTrabalho = Float.parseFloat(leitorRespostas.nextLine());
-    // float: 32 bits | ~ 1.4e-45 a 3.4e+38.
-    
+        System.out.print("Nota do Trabalho: ");
+        float notaTrabalho = Float.parseFloat(scanner.nextLine());
+        // float: 32 bits | Intervalo: 1.4E-45 a 3.4028235E38
 
-    System.out.print("Nota da Prova Final: ");
-    notaProvaFinal = Double.parseDouble(leitorRespostas.nextLine());
-    // double tem  64 bits | 4.9e-324 a 1.7e+308 de intevalo.
+        System.out.print("Nota da Prova Final: ");
+        double notaProvaFinal = Double.parseDouble(scanner.nextLine());
+        // double: 64 bits | Intervalo: 4.9E-324 a 1.7976931348623157E308
 
-    System.out.print("Conceito Final do Aluno: ");
-    conceitoFinal = leitorRespostas.nextLine().charAt(0);
-    // char tem 16 bits | 0 a 65.535 (caractere Unicode) de intevalo.
+        System.out.print("Conceito Final do Aluno: ");
+        char conceitoFinal = scanner.nextLine().charAt(0);
+        // char: 16 bits | Intervalo: 0 a 65535
 
-    System.out.print("Aluno Está Aprovado (true/false): ");
-    aprovado = Boolean.parseBoolean(leitorRespostas.nextLine());
-    // boolean tem  1 bit lógico | true ou false.
+        System.out.print("Aluno está Aprovado (true/false): ");
+        boolean aprovado = Boolean.parseBoolean(scanner.nextLine());
+        // boolean: 2 estados lógicos (true e false)
 
-    // os valores foram extraidos apartir dos comandos: tipoPrimitivo.size, tipoPrimitivo.MIN_VALUE e tipoPrimitivo.MAX_VALUE.
-    
+        System.out.println("--- Dados do Aluno Fictício ---");
+        System.out.println("Idade do Aluno: " + idade + " anos");
+        System.out.println("Número de Faltas: " + faltas);
+        System.out.println("Matrícula ID: " + matriculaId);
+        System.out.println("Código Nacional do Estudante: " + codigoNacional);
+        System.out.println("Nota do Trabalho: " + notaTrabalho);
+        System.out.println("Nota da Prova Final: " + notaProvaFinal);
+        System.out.println("Conceito Final do Aluno: " + conceitoFinal);
+        System.out.println("Aluno está Aprovado? " + aprovado);
 
-    System.out.println("Idade do Aluno: " + idade);
-    System.out.println("Número de Faltas: " + faltas);
-    System.out.println("Matrícula ID: " + matriculaID);
-    System.out.println("Código Nacional do Estudante: " + codigoNacional);
-    System.out.println("Nota do Trabalho: " + notaTrabalho);
-    System.out.println("Nota da Prova Final: " + notaProvaFinal);
-    System.out.println("Conceito Final do Aluno: " + conceitoFinal); 
-    System.out.println("Aluno Está Aprovado (true/false): " + aprovado);
+        // Os tamanhos em bits e os intervalos exibidos nos comentários acima foram
+        // consultados
+        // e obtidos através das estruturas das Wrapper Classes: Tipo.SIZE,
+        // Tipo.MIN_VALUE e Tipo.MAX_VALUE.
 
-    leitorRespostas.close();
-}
+        scanner.close();
+    }
 }
